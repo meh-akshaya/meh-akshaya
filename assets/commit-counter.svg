@@ -1,50 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="900"
+     height="420"
+     viewBox="0 0 900 420">
 
-    <rect width="900" height="420" rx="16" fill="#1e1e1e"/>
+    <!-- Background -->
+    <rect x="0" y="0"
+          width="900"
+          height="420"
+          rx="14"
+          fill="#1e1e1e"/>
 
-    <rect width="900" height="42" rx="16" fill="#2b2b2b"/>
-    <rect y="21" width="900" height="21" fill="#2b2b2b"/>
+    <!-- Title Bar -->
+    <rect x="0"
+          y="0"
+          width="900"
+          height="34"
+          rx="14"
+          fill="#2b2b2b"/>
 
-    <circle cx="24" cy="21" r="6" fill="#ff5f57"/>
-    <circle cx="44" cy="21" r="6" fill="#febc2e"/>
-    <circle cx="64" cy="21" r="6" fill="#28c840"/>
+    <!-- Square off bottom of title bar -->
+    <rect x="0"
+          y="17"
+          width="900"
+          height="17"
+          fill="#2b2b2b"/>
 
-    <text x="450"
-          y="27"
-          text-anchor="middle"
-          fill="#bfbfbf"
-          font-size="14"
-          font-family="Menlo, Monaco, Consolas, monospace">
-        Terminal
-    </text>
+    <!-- macOS Buttons -->
+    <circle cx="20" cy="17" r="6" fill="#ff5f57"/>
+    <circle cx="40" cy="17" r="6" fill="#febc2e"/>
+    <circle cx="60" cy="17" r="6" fill="#28c840"/>
 
     <g
-        fill="#ffffff"
-        font-family="Menlo, Monaco, Consolas, monospace"
-        font-size="24">
+        fill="#f5f5f5"
+        font-size="20"
+        font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, monospace">
 
-        <text x="30" y="82">
-            Last login: Sat Jul 18 09:02 UTC
+        <text x="18" y="72">
+            Last login: Sat Jul 18 09:38
         </text>
 
-        <text x="30" y="145">
-            meh-akshaya % whoami
+        <text x="18" y="132">
+meh-akshaya % whoami
         </text>
 
-        <text x="30" y="180">
-            lazy.developer
+        <text x="18" y="166">
+lazy.developer
         </text>
 
-        <text x="30" y="245">
-            meh-akshaya % last_commit
+        <text x="18" y="230">
+meh-akshaya % last_commit
         </text>
 
-        <text x="30" y="280">
-            00 days 00 hours 38 minutes ago
+        <text x="18" y="264">
+00 days 00 hours 20 minutes ago
         </text>
 
-        <text x="30" y="350">
-            meh-akshaya % █
+        <text x="18" y="338">
+meh-akshaya % █
         </text>
 
     </g>
