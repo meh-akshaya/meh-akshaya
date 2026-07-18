@@ -1,5 +1,5 @@
 <div align="center">
 
-<img src="assets/commit-counter.svg" width="900">
+<img src="assets/commit-counter.svg" width="500">
 
 </div>
