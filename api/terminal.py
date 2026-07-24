@@ -9,36 +9,18 @@ REPO = "meh-akshaya"
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
         try:
-            url = f"https://api.github.com/repos/{OWNER}/{REPO}/commits"
+            url = f"https://api.github.com/repos/{OWNER}/{REPO}/commits?per_page=1"
 
             response = requests.get(
                 url,
                 headers={"User-Agent": "meh-akshaya-terminal"},
                 timeout=10,
             )
+            response.raise_for_status()
 
-            if response.status_code != 200:
-                self.send_response(500)
-                self.end_headers()
-                self.wfile.write(f"GitHub API Error: {response.status_code}".encode())
-                return
-
-            commits = response.json()
-
-            commit_time = None
-
-            for commit in commits:
-                message = commit["commit"]["message"]
-
-                if message != "Update commit counter":
-                    date = commit["commit"]["author"]["date"]
-                    commit_time = datetime.fromisoformat(
-                        date.replace("Z", "+00:00")
-                    )
-                    break
-
-            if commit_time is None:
-                commit_time = datetime.now(timezone.utc)
+            commit = response.json()[0]
+            date = commit["commit"]["author"]["date"]
+            commit_time = datetime.fromisoformat(date.replace("Z", "+00:00"))
 
             now = datetime.now(timezone.utc)
             diff = now - commit_time
